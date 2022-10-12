@@ -1,7 +1,6 @@
-import React from "react";
 import './style.css';
 
-export default function App() {
+const App: React.FC = () => {
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
@@ -9,3 +8,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

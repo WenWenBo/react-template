@@ -14,7 +14,7 @@ const baseConfig = {
   target: "web",
   // 入口文件
   entry: {
-    main: resolve(SRC_PATH, "index.js"),
+    main: resolve(SRC_PATH, "index.tsx"),
   },
   // 输出
   output: {
@@ -51,8 +51,14 @@ const baseConfig = {
                   corejs: "3",
                 },
               ],
-              // 解析react
-              "@babel/preset-react",
+              [
+                // 解析react
+                "@babel/preset-react",
+                {
+                  runtime: "automatic"
+                }
+              ],
+              "@babel/preset-typescript"
             ],
             // 使用transform-runtime，避免全局污染，注入helper
             plugins: ["@babel/plugin-transform-runtime"],
