@@ -43,6 +43,5 @@ module.exports = {
         "dist/*",
         "webpack/*",
         ".eslintrc.js",
-        "package*.json"
     ],
 };
