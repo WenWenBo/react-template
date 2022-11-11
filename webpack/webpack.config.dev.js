@@ -1,3 +1,5 @@
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+
 // dev环境下相关配置
 module.exports =  {
   // 指定环境
@@ -6,6 +8,7 @@ module.exports =  {
   devtool: "cheap-module-source-map",
   // 输出source-map的方式，增加调试。eval（0, 92, 197); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">devtool: "eval（106, 115, 125); margin: 0px; padding: 0px; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);">// 本地服务器配置
   devServer: {
+    hot: true,
     // 启动GZIP压缩
     compress: true,
     // 设置端口号
@@ -26,5 +29,9 @@ module.exports =  {
         secure: false,
       },
     },
-  }
+  },
+
+  plugins: [
+    new ReactRefreshWebpackPlugin(),
+  ]
 };

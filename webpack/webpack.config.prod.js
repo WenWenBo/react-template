@@ -4,7 +4,7 @@ module.exports = {
   // 指定打包环境
   mode: "production",
 
-  devtool: false,
+  devtool: "source-map",
 
   optimization: {
     minimizer: [
